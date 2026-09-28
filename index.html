@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DocView - File Viewer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">◫</span>
+            DocView
+        </div>
+
+        <div class="nav-text">
+            Upload • View • Download
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="small-title">SIMPLE DOCUMENT TOOL</p>
+
+            <h1>
+                Upload your file.<br>
+                <span>View it instantly.</span>
+            </h1>
+
+            <p class="description">
+                Upload PDF, DOCX or PPTX files and view or download them
+                directly from your browser.
+            </p>
+        </section>
+
+
+        <!-- Upload Area -->
+
+        <section class="upload-section">
+
+            <div id="dropArea" class="drop-area">
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+                <h2>Drop your file here</h2>
+
+                <p>or choose a file from your computer</p>
+
+                <label for="fileInput" class="choose-btn">
+                    Choose File
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf,.docx,.pptx"
+                    hidden
+                >
+
+                <div class="supported">
+                    Supported: PDF · DOCX · PPTX
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- File Information -->
+
+        <section id="fileSection" class="file-section hidden">
+
+            <div class="file-card">
+
+                <div class="file-icon" id="fileIcon">
+                    📄
+                </div>
+
+                <div class="file-details">
+
+                    <h3 id="fileName">
+                        document.pdf
+                    </h3>
+
+                    <p id="fileSize">
+                        0 KB
+                    </p>
+
+                </div>
+
+                <button id="removeBtn" class="remove-btn">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="actions">
+
+                <button id="viewBtn" class="view-btn">
+                    👁 View File
+                </button>
+
+                <a id="downloadBtn" class="download-btn">
+                    ↓ Download
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Viewer -->
+
+        <section id="viewerSection" class="viewer-section hidden">
+
+            <div class="viewer-header">
+
+                <h2>Document Preview</h2>
+
+                <button id="closeViewer">
+                    Close Preview
+                </button>
+
+            </div>
+
+            <div id="viewer" class="viewer">
+
+                <!-- Preview appears here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>DocView • Runs completely in your browser</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
